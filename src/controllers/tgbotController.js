@@ -55,7 +55,7 @@ export const tgbotController = {
             // 获取文件并上传
             const fileInfo = await getFileInfo(c.env.TG_BOT_TOKEN, fileId);
             // console.log(fileInfo);
-            if (!fileInfo.file_path) {
+            if (!fileInfo || !fileInfo.file_path) {
                 await sendTelegramMessage(c.env.TG_BOT_TOKEN, chatId,`获取文件链接失败，大概率是文件过大，最大为20MB`);
                 return c.json({ success: true });
             }
