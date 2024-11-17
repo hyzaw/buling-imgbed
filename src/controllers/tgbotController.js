@@ -54,6 +54,7 @@ export const tgbotController = {
 
             // 获取文件并上传
             const fileInfo = await getFileInfo(c.env.TG_BOT_TOKEN, fileId);
+            console.log(fileInfo);
             const fileUrl = `https://api.telegram.org/file/bot${c.env.TG_BOT_TOKEN}/${fileInfo.file_path}`;
 
             const response = await fetch(fileUrl);
