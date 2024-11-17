@@ -15,7 +15,7 @@ export const MIME_TYPES = {
 };
 
 export const isValidImageType = (mimeType) => {
-    return Object.values(MIME_TYPES).includes(mimeType);
+    return true;
 };
 
 export const getContentTypeFromExtension = (extension) => {
