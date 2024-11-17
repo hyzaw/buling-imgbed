@@ -5,7 +5,7 @@ export const tgbotController = {
         let chatId;
         try {
             const update = await c.req.json();
-            console.log(update);
+            // console.log(update);
             
             if (!update.message) {
                 return c.json({ success: true });
