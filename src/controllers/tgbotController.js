@@ -118,7 +118,7 @@ _💡 点击链接可直接复制对应内容_`;
                 await sendTelegramMessage(c.env.TG_BOT_TOKEN, chatId,
                     `TG接口异常\n: ${error}`);
             }
-            return c.json({ success: false, error: error.message }, 500);
+            return c.json({ success: true });
         }
     }
 };
